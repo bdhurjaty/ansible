@@ -1,0 +1,7 @@
+- name: Sample template 
+  hosts: all
+  tasks:
+    - name: Copy a template file  
+      template:
+        src: sample.txt.j2
+        dest: /tmp/sample.txt

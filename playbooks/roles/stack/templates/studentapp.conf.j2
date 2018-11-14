@@ -1,0 +1,2 @@
+ProxyPass /student http://{{ansible_hostname}}:{{TOMCAT_PORTNO}}/student
+ProxyPassReverse /student http://{{ansible_hostname}}:{{TOMCAT_PORTNO}}/student

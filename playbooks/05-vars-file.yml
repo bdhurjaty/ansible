@@ -1,0 +1,8 @@
+- name: Variables from another file 
+  hosts: all 
+  vars_files:
+    - sample-var.yml
+  tasks:
+    - name: Print URL from a file 
+      debug:
+        msg: "URL == {{URL}}"

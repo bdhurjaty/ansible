@@ -1,0 +1,9 @@
+- name: Create a file 
+  hosts: all 
+  become: yes
+  tasks:
+    - name: Create a sample file 
+      shell: touch /tmp/sample 
+      become: no 
+
+    

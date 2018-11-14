@@ -1,0 +1,7 @@
+- name: Variables from CLI 
+  hosts: all
+  tasks:
+   - name: Print URL 
+     debug:
+      msg: "URL = {{URL}}"
+### ansible-playbook playbooks/06-vars-from-cli.yml -e URL=cli.google.com

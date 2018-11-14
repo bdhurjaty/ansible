@@ -1,0 +1,16 @@
+- name: Run a shell command and print its status 
+  hosts: all 
+  tasks:
+    - name: Run a shell command 
+      shell: uptime1
+      register: out 
+      ignore_errors: true
+
+    - set_fact:
+        STATUS: "{{out.failed}}"
+
+    - debug:  msg="SUCCESS"
+      when: STATUS == false 
+
+    - debug:  msg="FAILURE"
+      when: STATUS == true

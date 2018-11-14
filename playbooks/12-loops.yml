@@ -1,0 +1,10 @@
+- name: Loops
+  hosts: all 
+  tasks:
+    - name: Print multiple values 
+      loop:
+        - google.com
+        - yahoo.com
+        - facebook.com 
+      debug:
+        msg: "URL = {{item}}"

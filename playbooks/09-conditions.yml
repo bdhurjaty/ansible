@@ -1,0 +1,7 @@
+- name: when condition 
+  hosts: all
+  tasks:
+    - name: Print Project Info 
+      debug: 
+        msg: "PROJECT = {{ansible_local.projinfo.PROJECT}}"
+      when: ansible_local.projinfo.PROJECT == "Hadoop"

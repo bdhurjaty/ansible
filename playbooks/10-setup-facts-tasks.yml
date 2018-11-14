@@ -1,0 +1,9 @@
+- name: Define variables in runtime using tasks 
+  hosts: all
+  tasks:
+    - name: Define a variable URL 
+      set_fact:
+        URL: task.google.com 
+
+    - debug: msg="URL == {{URL}}"
+    

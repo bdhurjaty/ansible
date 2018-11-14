@@ -1,0 +1,5 @@
+- name: Print hostname 
+  hosts: all 
+  tasks:
+   - debug: msg="Host Name == {{ansible_hostname}}"
+   - debug: msg="IP Address == {{ansible_default_ipv4.address}}"

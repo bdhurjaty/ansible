@@ -1,0 +1,10 @@
+- name: become-user example 
+  hosts: all
+  tasks:
+    - name: RUn id command 
+      shell: id 
+      register: out 
+      become_user: studentapp
+      become: yes
+
+    - debug: msg="{{out}}"
