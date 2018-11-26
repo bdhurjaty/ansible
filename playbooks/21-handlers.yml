@@ -1,0 +1,21 @@
+- name: Demo on handlers
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install Web Server 
+      package:
+        name: httpd
+        state: installed
+      notify: Restart Web Service
+
+    - name: Update httpd config
+      copy:
+        src: httpd.conf
+        dest: /etc/httpd/conf/httpd.conf
+      notify: Restart Web Service
+    
+  handlers:
+    - name: Restart Web Service 
+      service:
+        name: httpd
+        state: restarted

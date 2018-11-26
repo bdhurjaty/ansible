@@ -1,0 +1,6 @@
+- include: web.yml
+  tags:
+   - web
+- include: app.yml
+  tags:
+   - app

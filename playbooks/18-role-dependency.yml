@@ -1,0 +1,4 @@
+- name: Role depencecies 
+  hosts: all
+  roles:
+    - test2

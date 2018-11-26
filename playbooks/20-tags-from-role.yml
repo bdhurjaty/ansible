@@ -1,0 +1,4 @@
+- name: Demo on tags from roles
+  hosts: all
+  roles:
+    - test3

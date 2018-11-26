@@ -1,0 +1,9 @@
+- name: Demo on tags
+  hosts: all
+  tasks:
+    - debug: msg="Web Server Installation"
+      tags:
+        - web
+    - debug: msg="App Server Installation"
+      tags:
+        - app
