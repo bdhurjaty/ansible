@@ -1,0 +1,6 @@
+- name: test wait_for
+  hosts: all
+  tasks:
+    - wait_for:
+        path: /tmp/abc
+        state: present
